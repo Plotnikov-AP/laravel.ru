@@ -1,0 +1,212 @@
+﻿/* FONTS */
+
+/* HEADER */
+                                                                 
+#header {
+	/* background-image: url("../images/myfonheader.webp"); */
+
+	background-color: #c9c9d5;                                                        
+	border: 1px solid black;
+	color:blue;
+	min-height: 10vh;
+	font-size: 30px;
+}
+
+ul.menu {
+	display:flex;
+	justify-content: center;
+    font-size: 25px;
+}
+
+ul.menu li {
+	float: left;
+	list-style: none;
+	
+}
+
+ul.menu li a {
+	color: #48515b;
+	display: inline-block;
+	margin: 15px;
+	text-decoration: none;
+}
+
+ul.menu li:first-child a {
+	margin-left: 20px;
+}
+
+ul.menu li:last-child a {
+	margin-right: 20px;
+}
+
+ul.menu li a:hover {
+	color: #4a0ee2;
+	text-decoration: underline;
+}
+
+#left-main {
+	/* border: 1px solid black; */
+	display: inline-block;
+	min-height: 100vh;
+	width: 100%;
+	margin: 5px;
+}
+
+/* LEFT */
+
+#left {                                                        
+	border: 5px ridge #0000ff;
+	display:  inline-block;
+	width: 15vw;
+	min-height: 100vh;
+	vertical-align: top;
+}
+
+.clock {
+	font-size: 30px;
+	color:blue;
+	background-color: rgb(148, 234, 63);
+	text-align: center;
+	padding: 15px;
+}
+
+.clock span {
+	display: block;
+}
+
+.count {
+	font-size: 20px;
+}
+
+.count span {
+	display: block;
+	margin: 5px;
+}
+
+.goto-basket {
+	border: 1px solid black;
+	position: relative;
+	text-align: center;
+    width: 100%; /* для IE 6 */
+}
+
+.goto-basket span {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+	font-size: 50px;
+	font-weight:800;
+	color: crimson;
+	/* background: rgba(0, 0, 0, 0.7); */
+}
+
+#main {
+	/* border: 1px solid rgb(223, 194, 194); */
+	display: inline-block;
+	width: 80vw;
+	min-height: 100vh;
+	vertical-align: top;
+}
+
+.test-work {
+	/* border: 1px solid black; */
+	margin: 25px;
+}
+
+.test-work-url {
+	font-size: 30px;
+}
+
+.test-work-url a:hover {
+	color: #4a0ee2;
+	text-decoration: underline;
+}
+
+.test-work-description {
+	font-size: 30px;
+}
+
+.product {
+	border: 1px solid black;
+	width: 400px;
+	height: 400px;
+	text-align: center;
+	font-size: 25px;
+	display:  inline-block;
+	vertical-align: top;
+	padding: 10px;
+}
+
+.product label img {
+	display: block;
+	margin: 5px;
+}
+
+.product button {
+	font-size: 20px;
+}
+
+.paginate {
+	font-size: 25px;
+	text-align: center;
+	margin: 20px;
+}
+
+.paginate span {
+	display: block;
+}
+
+#modal_product_detail {
+	display: none;
+	position:fixed;
+	width: 50%;
+	height: 50%;
+	top:25%;
+	left:25%;
+	z-index: 1;
+	background-color:rgb(138, 157, 235);
+	font-size: 30px;
+	text-align: center;
+	justify-content: center;
+	/* padding:0 auto; */
+	/* margin: 0 auto; */
+}
+
+#modal_product_detail img label {
+	margin: 0 auto;
+}
+
+.modal_close {
+	float: right;
+	font-size: 40px;
+}
+
+.modal_close:hover {
+	color: #4a0ee2;
+	text-decoration: underline;
+	cursor:pointer;
+}
+
+.table {
+	border: 1px solid black;
+	font-size: 30px;
+}
+
+.table tr td {
+	border: 1px solid black;
+	font-size: 30px;
+	color: crimson;
+}
+
+.table_td {
+	color: crimson;
+}
+
+#footer {
+	background-color: #c9c9d5;                                                        
+	/* border: 1px solid black; */
+	color:blue;
+	min-height: 10vh;
+	font-size: 20px;
+}
