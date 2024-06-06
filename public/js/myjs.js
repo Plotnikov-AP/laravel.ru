@@ -1,7 +1,7 @@
 ﻿function get_count() {
 	var result;
-	$.ajax({                         
-	url: '/api/count',                        
+$.ajax({                         
+	url: "/api/count",                        
 	method: 'GET',
 	async: false,
 	}).done(function(data) {
@@ -55,7 +55,7 @@ function basket_count()
 {
 	//делаем запрос к БД
 	$.ajax({                         
-	url: '/api/basket/count',                        
+	url: "/api/basket/count",                        
 	method: 'GET',
 	async: false,
 	}).done(function(data) {
