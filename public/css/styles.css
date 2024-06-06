@@ -109,6 +109,17 @@ ul.menu li a:hover {
 	vertical-align: top;
 }
 
+.author {
+	font-size: 25px;
+	color: rgb(220, 20, 173);
+}
+
+.author_head {
+	font-size: 40px;
+	font-weight:800;
+	text-align: center;
+}
+
 .test-work {
 	/* border: 1px solid black; */
 	margin: 25px;
