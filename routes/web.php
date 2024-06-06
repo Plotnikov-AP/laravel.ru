@@ -8,7 +8,6 @@ use App\Http\Controllers\BasketController;
 
 
 Route::get('/', [MainController::class, 'main']);
-Route::get('/main', [MainController::class, 'main'])->name('main');
 Route::get('/author', [MainController::class, 'author'])->name('author');
 Route::get('/testworks', [MainController::class, 'testWorks'])->name('testworks');
 Route::get('/shop', [MainController::class, 'shop'])->name('shop');
