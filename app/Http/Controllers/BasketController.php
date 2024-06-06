@@ -41,7 +41,7 @@ class BasketController extends Controller
         $summa=0;
         foreach ($products as $product) {
             $table.='<tr>';
-            $table.='<td class="table_td">'.$product->name.'</td><td>'.$product->price.'</td>';
+            $table.='<td class="table_td">'.$product->name.'</td><td>'.$product->price.' руб</td>';
             $table.='</tr>';
             $summa+=$product->price;
         }
