@@ -190,7 +190,7 @@ ul.menu li a:hover {
 
 .table {
 	border: 1px solid black;
-	font-size: 30px;
+	font-size: 20px;
 }
 
 .table tr td {
@@ -200,6 +200,11 @@ ul.menu li a:hover {
 }
 
 .table_td {
+	color: crimson;
+}
+
+.basket_summa {
+	font-size: 30px;
 	color: crimson;
 }
 
