@@ -17,7 +17,7 @@ class TestWorkFactory extends Factory
     public function definition(): array
     {
         return [
-            'url'=>'/testworks/pyatnashki/index.html ',
+            'url'=>'/my_works/pyatnashki/index.html ',
             'title'=>'Пятнашки',
             'description'=>'Когда то изучал js, придумывал себе разные практические тестовые задания и вот тогда родилась эта страничка...'
         ];
