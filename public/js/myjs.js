@@ -17,12 +17,12 @@ $.ajax({
 
 function get_count_timeout() {
 	var count=get_count();
-	$('#span-count-all').text("Сайт посетили: "+count.all+" раз(а)");
-	$('#span-count-desktop').text("C ПК: "+count.desktop+" раз(а)");
-	$('#span-count-phone').text("C телефона: "+count.phone+" раз(а)");
-	$('#span-count-tablet').text("C планшета: "+count.tablet+" раз(а)");
-	$('#span-count-robot').text(+count.robot+" робот(а)ов");
-	setTimeout("get_count_timeout()", 3000);
+	$('#count-all').text(count.all);
+	$('#count-desktop').text(count.desktop);
+	$('#count-phone').text(count.phone);
+	$('#count-tablet').text(count.tablet);
+	$('#count-robot').text(count.robot);
+	setTimeout("get_count_timeout()", 5000);
 }
 
 
@@ -65,7 +65,7 @@ function basket_count()
 			$('#basket-count').text('not found');
 		}
 	});
-	setTimeout("basket_count()", 3000);
+	setTimeout("basket_count()", 5000);
 }
 
 function onloadd()
