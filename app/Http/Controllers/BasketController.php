@@ -18,15 +18,16 @@ class BasketController extends Controller
         }
     }
 
-    public function del() {
-
+    public function del($id) {
+        $basket=Basket::find($id)->delete();
+        return redirect()->route('basket_show');
     }
 
     public function get() {
         $baskets=Basket::all();
         $result=array();
         foreach ($baskets as $basket) {
-            $result[]=$basket->Product;
+            $result[$basket->id]=$basket->Product;
         }
         return $result;
     }
@@ -39,9 +40,9 @@ class BasketController extends Controller
         $products=$this->get();
         $table='<table class="table">';
         $summa=0;
-        foreach ($products as $product) {
+        foreach ($products as $id=>$product) {
             $table.='<tr>';
-            $table.='<td class="table_td">'.$product->name.'</td><td>'.$product->price.' руб</td>';
+            $table.='<td class="table_td">'.$product->name.'</td><td>'.$product->price.' руб</td><td><a href="/api/basket/del/'.$id.'"><img src="/images/delete.webp" alt="Удалить из корзины"/></a></td>';
             $table.='</tr>';
             $summa+=$product->price;
         }

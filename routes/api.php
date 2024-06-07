@@ -10,9 +10,9 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 Route::get('/count', [CounterController::class, 'getAllCount']);
-Route::get('//shop/product/{id}', [ProductController::class, 'showProductDetail']);
-Route::get('//basket/add/{product_id}', [BasketController::class, 'Add']);
-Route::get('//basket/del/{product_id}', [BasketController::class, 'del']);
-Route::get('//basket/get', [BasketController::class, 'get']);
-Route::get('//basket/count', [BasketController::class, 'count']);
+Route::get('/shop/product/{id}', [ProductController::class, 'showProductDetail']);
+Route::get('/basket/add/{product_id}', [BasketController::class, 'Add']);
+Route::get('/basket/del/{id}', [BasketController::class, 'del']);
+// Route::get('//basket/get', [BasketController::class, 'get']);
+Route::get('/basket/count', [BasketController::class, 'count']);
 
