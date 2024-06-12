@@ -2,6 +2,6 @@
     <img src="{{ $photo }}" /><br />
     <label>Название товара: <b>{{ $name }}</b></label><br />
     <label>Цена товара: <b>{{ $price }} </b>рублей</label><br /><br />
-    <input type="button" id="{{ $id }}" class="basket_add" value="Добавить в корзину" />
-    <input type="button" id="{{ $id }}" class="show_div_detail" value="Подробнее" />
+    <button onclick="basket_add({{ $id }})">Добавить в корзину</button><br />
+    <button class="show_div_detail" onclick="show_div_detail({{ $id }})">Подробнее</button>
 </div>

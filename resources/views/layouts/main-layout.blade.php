@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="{{ asset('/css/styles.css') }}">
     <script src="{{ asset('/js/jquery.js') }}"></script>
+    <script src="{{ asset('/js/sweetalert2.all.min.js') }}"></script>
     <script src="{{ asset('/js/myjs.js') }}"></script>
     <title>{{ $title }}</title>
 </head>

@@ -75,3 +75,39 @@ function onloadd()
 	basket_count();
 }
 
+function show_div_detail(id) {
+		//делаем запрос к БД
+		$.ajax({                         
+		url: '/api/shop/product/'+id,                        
+		method: 'GET',
+		async: false,
+		}).done(function(data) {
+			if (!!data) {
+				$("#photo").attr('src', data.photo);
+				$("#name").text('Название товара: '+data.name);
+				$("#price").text('Цена товара: '+data.price+' рублей');
+				$("#description").text('Описание товара: '+data.description);
+				$("#on_sklad").text('Осталось на складе: '+data.on_sklad);
+				$('#modal_product_detail').show();
+				// console.log(data);
+			} else {
+				result=false;
+			}
+	});
+}
+
+function basket_add(id) {
+		//делаем запрос к БД
+		$.ajax({                         
+		url: '/api/basket/add/'+id,                        
+		method: 'GET',
+		async: false
+		}).done(function(data) {
+			if (!!data) {
+				Swal.fire('Товар в корзину добавлен');
+			} else {
+				Swal.fire('Товар в корзину не добавлен');
+			}
+	});
+}
+
