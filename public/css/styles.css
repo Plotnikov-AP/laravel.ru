@@ -3,13 +3,18 @@
 /* HEADER */
                                                                  
 #header {
-	/* background-image: url("../images/myfonheader.webp"); */
-
 	background-color: #c9c9d5;                                                        
 	border: 1px solid black;
 	color:blue;
 	min-height: 10vh;
-	font-size: 30px;
+	font-size: 25px;
+	text-align: center;
+}
+
+.header-login {
+	display:flex;
+  	justify-content:flex-end;
+	margin-right: 30px;
 }
 
 ul.menu {
@@ -84,8 +89,10 @@ ul.menu li a:hover {
 
 .goto-basket {
 	border: 1px solid black;
+	display: flex;
 	position: relative;
 	text-align: center;
+	justify-content: center;
     width: 100%; /* для IE 6 */
 }
 
@@ -142,7 +149,7 @@ ul.menu li a:hover {
 	width: 350px;
 	height: 350px;
 	text-align: center;
-	font-size: 25px;
+	font-size: 20px;
 	display:  inline-block;
 	vertical-align: top;
 	padding: 10px;
