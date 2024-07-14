@@ -11,10 +11,10 @@
 	text-align: center;
 }
 
-.header-login {
-	display:flex;
-  	justify-content:flex-end;
-	margin-right: 30px;
+.display_flex {
+	display: flex;
+	align-items: center;
+    justify-content: center;
 }
 
 ul.menu {

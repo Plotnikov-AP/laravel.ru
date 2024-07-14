@@ -13,8 +13,10 @@
 </head>
 <body onload="onloadd()";>
     <div id="header">
-        Это тестовый сайт Плотникова Александра на LARAVEL 11.14.0
-        @include('layouts.my-login')
+        <div class="display_flex">
+            Это тестовый сайт Плотникова Александра на LARAVEL 11.14.0
+            @include('layouts.my-login')
+        </div>
         <x-my-menu />
     </div>
     <div id="left-main">
