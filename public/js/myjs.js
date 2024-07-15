@@ -1,7 +1,9 @@
-﻿function get_count() {
+﻿var dop_url='laravel.ru/';
+
+function get_count() {
 	var result;
-$.ajax({                         
-	url: "/api/count",                        
+	$.ajax({                         
+	url: dop_url+"/api/count",                        
 	method: 'GET',
 	async: false,
 	}).done(function(data) {
@@ -55,7 +57,7 @@ function basket_count()
 {
 	//делаем запрос к БД
 	$.ajax({                         
-	url: "/api/basket/count",                        
+	url: dop_url+"/api/basket/count",                        
 	method: 'GET',
 	async: false,
 	}).done(function(data) {
@@ -78,7 +80,7 @@ function onloadd()
 function show_div_detail(id) {
 		//делаем запрос к БД
 		$.ajax({                         
-		url: '/api/shop/product/'+id,                        
+		url: dop_url+'/api/shop/product/'+id,                        
 		method: 'GET',
 		async: false,
 		}).done(function(data) {
@@ -99,7 +101,7 @@ function show_div_detail(id) {
 function basket_add(id) {
 		//делаем запрос к БД
 		$.ajax({                         
-		url: '/api/basket/add/'+id,                        
+		url: dop_url+'/api/basket/add/'+id,                        
 		method: 'GET',
 		async: false
 		}).done(function(data) {
