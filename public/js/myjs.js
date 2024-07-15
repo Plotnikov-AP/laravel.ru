@@ -1,4 +1,4 @@
-﻿var dop_url='laravel.ru/';
+﻿var dop_url='';
 
 function get_count() {
 	var result;
