@@ -42,7 +42,7 @@ class BasketController extends Controller
         $summa=0;
         foreach ($products as $id=>$product) {
             $table.='<tr>';
-            $table.='<td class="table_td">'.$product->name.'</td><td>'.$product->price.' руб</td><td><a href="/api/basket/del/'.$id.'"><img src="/images/delete.webp" alt="Удалить из корзины"/></a></td>';
+            $table.='<td class="table_td">'.$product->name.'</td><td>'.$product->price.' руб</td><td><a href="/api/basket/del/'.$id.'"><img src="/laravel.ru/images/delete.webp" alt="Удалить из корзины"/></a></td>';
             $table.='</tr>';
             $summa+=$product->price;
         }
