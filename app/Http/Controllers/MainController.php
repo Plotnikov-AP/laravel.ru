@@ -10,7 +10,7 @@ class MainController extends Controller
 {
     public function main() {
         CounterController::setAllCount();
-        return view('author');
+        return view('main');
     }
 
     public function author() {
