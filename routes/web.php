@@ -5,9 +5,12 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;                                                              
 use App\Models\Counter;                                                                   
 use App\Http\Controllers\MainController;                                                  
-use App\Http\Controllers\BasketController;                                                
-                                                                                          
-                                                                                          
+use App\Http\Controllers\BasketController;
+
+
+Route::get('/', function () {
+    return redirect()->route('main');;
+});
 Route::get('/main', [MainController::class, 'main'])->name('main');                                         
 Route::get('/author', [MainController::class, 'author'])->name('author');                 
 Route::get('/testworks', [MainController::class, 'testWorks'])->name('testworks');        
