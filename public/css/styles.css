@@ -6,7 +6,7 @@
 	background-color: #c9c9d5;                                                        
 	border: 1px solid black;
 	color:blue;
-	height: 10vh;
+	height: 15vh;
 	font-size: 25px;
 	text-align: center;
 }
@@ -64,7 +64,7 @@ ul.menu li a:hover {
 	border: 5px ridge #0000ff;
 	display:  inline-block;
 	width: 15vw;
-	min-height: 80vh;
+	min-height: 75vh;
 	vertical-align: top;
 }
 
@@ -112,7 +112,7 @@ ul.menu li a:hover {
 	/* border: 1px solid rgb(223, 194, 194); */
 	display: inline-block;
 	width: 80vw;
-	min-height: 80vh;
+	min-height: 75vh;
 	vertical-align: top;
 }
 
