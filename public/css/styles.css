@@ -232,3 +232,20 @@ ul.menu li a:hover {
 	height: 10vh;
 	font-size: 20px;
 }
+
+/*Ссылки */
+a:link {
+	color: #497DDD; 
+	border-bottom: 1px dashed; 
+  }
+  a:visited {
+	color: #EF7D55;
+  }
+  a:hover {
+	color: #154088; 
+	border-bottom: .07em solid;
+  }
+  a:active {
+	color: #497DDD; 
+	border-bottom: 1px dashed;
+  }
