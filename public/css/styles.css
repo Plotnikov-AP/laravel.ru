@@ -44,11 +44,6 @@ ul.menu li:last-child a {
 	margin-right: 20px;
 }
 
-ul.menu li a:hover {
-	color: #4a0ee2;
-	text-decoration: underline;
-}
-
 #left-main {
 	/* border: 1px solid black; */
 	display: inline-block;
