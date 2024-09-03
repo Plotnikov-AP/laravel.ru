@@ -3,7 +3,9 @@
 /* HEADER */
                                                                  
 #header {
-	background-color: #c9c9d5;                                                        
+	background-image: url("../laravel.ru/images/background-header.png");
+	/* background-repeat: repeat; */
+	background-size: cover;
 	border: 1px solid black;
 	color:blue;
 	height: 15vh;
@@ -21,7 +23,7 @@ ul.menu {
 	display:flex;
 	justify-content: center;
     font-size: 25px;
-	font-weight:700;
+	font-weight:600;
 }
 
 ul.menu li {
@@ -238,10 +240,10 @@ a:link {
 	color: #f16b3a;
   }
   a:hover {
-	color: #1261e9; 
+	color: #073687; 
 	border-bottom: .07em solid;
   }
   a:active {
-	color: #1e3d77; 
+	color: #03225a; 
 	border-bottom: 1px dashed;
   }
