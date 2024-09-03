@@ -7,10 +7,7 @@
         <a href="{{ route('author') }}">Об авторе</a>                            
     </li>                                                                        
     <li>                                                                         
-        <a href="{{ route('testworks') }}">Мои тестовые работы</a>                          
-    </li>                                                                        
-    <li>                                                                         
-        <a href="{{ route('shop') }}">Магазин</a>                   
+        <a href="{{ route('shop') }}">Тестовый магазин</a>                   
     </li>                                                                        
 </ul>                                                                            
 </div>
