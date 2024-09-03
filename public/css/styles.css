@@ -21,6 +21,7 @@ ul.menu {
 	display:flex;
 	justify-content: center;
     font-size: 25px;
+	font-weight:700;
 }
 
 ul.menu li {
@@ -30,7 +31,7 @@ ul.menu li {
 }
 
 ul.menu li a {
-	color: #48515b;
+	/* color: #48515b; */
 	display: inline-block;
 	margin: 15px;
 	text-decoration: none;
@@ -230,17 +231,17 @@ ul.menu li:last-child a {
 
 /*Ссылки */
 a:link {
-	color: #497DDD; 
+	color: #1d66ed; 
 	border-bottom: 1px dashed; 
   }
   a:visited {
-	color: #EF7D55;
+	color: #f16b3a;
   }
   a:hover {
-	color: #154088; 
+	color: #1261e9; 
 	border-bottom: .07em solid;
   }
   a:active {
-	color: #497DDD; 
+	color: #1e3d77; 
 	border-bottom: 1px dashed;
   }
