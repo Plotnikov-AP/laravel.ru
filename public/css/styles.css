@@ -114,34 +114,121 @@ ul.menu li:last-child a {
 	vertical-align: top;
 }
 
-.author {
-	font-size: 25px;
-	color: rgb(220, 20, 173);
-}
-
 .author_head {
 	font-size: 40px;
 	font-weight:800;
 	text-align: center;
+	color: #f13a3a;
 }
 
-.test-work {
-	/* border: 1px solid black; */
-	margin: 25px;
+.author {
+	font-style: italic;
+	font-size: 25px;
+	margin-left: 10px;
+	color: rgb(220, 20, 173);
 }
 
-.test-work-url {
-	font-size: 30px;
+.contact {
+	font-size: 25px;
+	text-align: center;
 }
 
-.test-work-url a:hover {
-	color: #4a0ee2;
-	text-decoration: underline;
+/* SLIDER */                                                                
+                                                                            
+#slider {                                                                   
+	background-color: #b4d9e9;
+	color: #3869a1;                                                     
+	padding: 30px 0 14px;                                               
+	position:relative;                                                  
+	width: 83vw;
+	height: 50vh;
+}                                                                           
+                                                                            
+#slider h3 {                                                                
+	font-size: 200%;
+	text-align: center;                                                    
+}                                                                           
+                                                                            
+#slider img {                                                               
+	float: left;                                                        
+	margin-top: 30px;                                                   
+	width: 250px;                                                       
+}                                                                           
+                                                                            
+#slider .more {                                                             
+	float: right;                                                       
+	margin-right: 20px; 
+	margin-left: 20px;                                               
+	margin-top: -30px;                                                  
+}                                                                           
+                                                                            
+#slider .more a, #left .course_order .order a, #left .course_order .more a {
+	background-color: #009ee3;                                          
+	font-size: 150%;                                                     
+	color: #fff;                                                        
+	display: inline-block;                                              
+	padding: 10px 20px;                                                 
+	text-decoration: none;                                              
+}                                                                           
+                                                                            
+#slider .more a:hover, #left .course_order .order a:hover {                 
+	background-color: #39c3ff;                                          
+}                                                                           
+                                                                            
+.slider_item p {                                                            
+	margin: 15px 0 0;                                                   
+}                                                                           
+                                                                            
+.slider_content {                                                           
+	font-size: 150%;                                                     
+	margin-left: 300px;                                                 
+	margin-right: 10px;                                                
+	padding-top: 25px;
+}                                                                           
+                                                                            
+.slider_content p {                                                         
+	font-style: italic;                                                 
+	width: 55vw;                                                       
+	-webkit-margin-before: 23px;                                        
+}                                                                           
+                                                                            
+.slider_item {                                                              
+	display: none;                                                      
+}                                                                           
+                                                                            
+.slider_item:first-child {                                                  
+	display: block;                                                     
 }
 
-.test-work-description {
-	font-size: 30px;
-}
+#bullets {                                                       
+	display: -webkit-box;                                    
+	display: -ms-flexbox;                                    
+	display: flex;                                           
+	-webkit-box-pack: center;                                
+	-ms-flex-pack: center;                                   
+	justify-content: center;                                 
+	-ms-flex-wrap: wrap;                                     
+	flex-wrap: wrap;                                         
+	margin: 0 15px;                                        
+	text-align: center;                                      
+	padding: 0 auto 0;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}                                                                
+                                                                 
+#bullets > div {                                                 
+	background: url("../images/bullet.png") no-repeat;       
+	cursor: pointer;                                         
+	float: left;                                             
+	height: 14px;                                            
+	margin: 5px;                                             
+	width: 14px;                                             
+}                                                                
+                                                                 
+#bullets .active {                                               
+	background: url("../images/bullet_active.png") no-repeat;
+}                                                                
 
 .product {
 	border: 1px solid black;

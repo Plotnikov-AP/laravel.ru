@@ -1,23 +1,40 @@
 <x-main-layout>
     <x-slot name="title">Об авторе</x-slot>
     <x-slot name="content">
-    <span class="author">
-    <div class="author_head">Стек:<br /></div>
-1.  PHP junior. ООП. локальный сервер apache, php, MySQL. Программирую на PHP более 10 лет. Частные заказы: скрипты, обработчики прайсов, парсеры, торговые боты (через web интерфейс и через api) и т.д. и т.п.<br />
-2.  MySQL. Много заказов сделано с использованием этой БД.<br />
-3.  Laravel. Изучил на платном курсе MyRusakov.ru. Имеется сертификат. Очень все понравилось. Коммерческого опыта пока нет, но я работаю в этом направлении)))<br />
-<a href="http://62.113.116.11:7777/laravel.ru">Тестовый сайт на виртуальном сервере</a>. Постоянно дорабатывается...<br />
-4.  Git <a href="https://github.com/Plotnikov-AP">https://github.com/Plotnikov-AP </a>изучен на полноценном курсе с практикой. Сейчас использую для моно работы с виртуальным сервером. Опыта многопользовательской разработки пока нет.<br />
-5.  JavaScript. Изучен минимально, ровно настолько, сколько требуется при выполнении заказов по php.<br />
-6.  C# изучал на платных курсах. Практики в этом направлении нет, поэтому пока не юзаю.<br />
-
-<div class="author_head">О себе:<br /></div>
-1.  Два высших образования (НГПУ: учитель математики и информатики и НГУ: ВМК, прикладная информатика).<br />
-2.  Обучаем: студентом занимал второе личное место в региональной межвузовской олимпиаде по высшей математике.<br />
-3.  С детства увлекаюсь шахматами и всевозможными головоломками.<br />
-4.  Исполнителен, педантичен, коммуникабелен.<br />
-5.  Ищу удаленную работу бэкенд-разработчика.<br />
-mail: plotnikov-ap@yandex.ru <a style="color:Blue;" href="plotnikov-ap@yandex.ru">Написать письмо</a>
-</span>
+    
+    <div id="content">                                                                                                                                                                                 
+	    <div id="slider">                                                                                                                                                                          
+        @foreach ($sliders as $slider)                                                                                                                                                                  
+            <div class="slider_item">                                                                                                                                                                  
+                <img src="/images/slider/{{ $slider->alias }}.png" alt="{{ $slider->title }}" />                                                                                                      
+                <div class="slider_content">                                                                                                                                                           
+                    <h3>{{ $slider->title }}</h3>                                                                                                                                                      
+                    <p>{!! $slider->slider_description !!}</p>                                                                                                                                           
+                </div>                                                                                                                                                                                 
+            </div>                                                                                                                                                                                     
+        @endforeach
+        <div class="clear"></div>                   
+            <div id="bullets">                          
+                <div class="active"></div>              
+                @for ($i = 1; $i < count($sliders); $i++)
+                <div></div>                         
+                @endfor                                 
+            </div>                                      
+        </div>                                         
+        </div>                                      
+        <div class="author_head">О себе:<br /></div>
+        <div class="author">
+        1.  Два высших образования (НГПУ: учитель математики и информатики и НГУ: ВМК, прикладная информатика).<br />
+        2.  Обучаем: студентом занимал второе личное место в региональной межвузовской олимпиаде по высшей математике.<br />
+        3.  С детства увлекаюсь шахматами и всевозможными головоломками.<br />
+        4.  Исполнителен, педантичен, коммуникабелен.<br />
+        5.  Ищу удаленную работу бэкенд-разработчика.<br />
+<!-- mail: plotnikov-ap@yandex.ru <a style="color:Blue;" href="plotnikov-ap@yandex.ru">Написать письмо</a> -->
+        </div>
+        <div class="contact">
+            Mail: plotnikov-ap@yandex.ru<br />
+            Telegram: <a href="https://t.me/Plotnikov_AP">Plotnikov_AP</a>
+        </div>
+    </div> 
     </x-slot>
 </x-main-layout>

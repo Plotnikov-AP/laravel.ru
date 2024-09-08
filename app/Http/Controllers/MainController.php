@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\TestWork;
 use App\Models\Product;
+use App\Models\Slider;
 
 class MainController extends Controller
 {
@@ -14,7 +15,8 @@ class MainController extends Controller
     }
 
     public function author() {
-        return view('author');
+        $sliders = Slider::orderBy('id')->get();
+        return view('author', ['sliders'=>$sliders]);
     }
     
     public function testWorks() {
