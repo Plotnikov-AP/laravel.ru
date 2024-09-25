@@ -6,9 +6,10 @@
 	    <div id="slider">                                                                                                                                                                          
         @foreach ($sliders as $slider)                                                                                                                                                                  
             <div class="slider_item">                                                                                                                                                                  
-                <img src="/images/slider/{{ $slider->alias }}.png" alt="{{ $slider->title }}" />                                                                                                      
+                <img src="/images/slider/{{ $slider->alias }}.gif" alt="{{ $slider->title }}" />                                                                                                      
                 <div class="slider_content">                                                                                                                                                           
-                    <h3>{{ $slider->title }}</h3>                                                                                                                                                      
+                    <!-- <img src="/images/slider/{{ $slider->alias }}.gif" alt="{{ $slider->title }}" /> -->
+                    <!-- <h3><img src="/images/slider/{{ $slider->alias }}.gif" alt="{{ $slider->title }}" /></h3>                                                                                                                                                      -->
                     <p>{!! $slider->slider_description !!}</p>                                                                                                                                           
                 </div>                                                                                                                                                                                 
             </div>                                                                                                                                                                                     
