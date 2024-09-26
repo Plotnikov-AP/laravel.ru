@@ -38,5 +38,13 @@ $(document).ready(function() {
 		if (i == bullets.length) i = 0;
 		showSlide();
 	}
+
+	$('.menu a').each(function () { 
+		var location = window.location.href;
+		var link = this.href;
+		if(location == link) { 
+			$(this).addClass('menuactive');
+		}
+	});
 	
 });

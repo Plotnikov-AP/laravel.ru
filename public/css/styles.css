@@ -23,7 +23,7 @@ ul.menu {
 	display:flex;
 	justify-content: center;
     font-size: 25px;
-	font-weight:600;
+	font-weight:500;
 }
 
 ul.menu li {
@@ -319,18 +319,20 @@ ul.menu li:last-child a {
 }
 
 /*Ссылки */
-a:link {
+/* a:link {
 	color: #1d66ed; 
 	border-bottom: 1px dashed; 
-  }
-  a:visited {
+} */
+/* a:visited {
 	color: #f16b3a;
-  }
-  a:hover {
-	color: #073687; 
+} */
+a:hover {
+	/* color: #073687;  */
 	border-bottom: .07em solid;
-  }
-  a:active {
-	color: #03225a; 
-	border-bottom: 1px dashed;
-  }
+	/* font-weight:600; */
+}
+.menuactive {
+	color: #c72c72; 
+	/* border-bottom: 1px solid; */
+	font-weight:700;
+}

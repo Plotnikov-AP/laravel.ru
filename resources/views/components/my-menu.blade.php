@@ -1,4 +1,5 @@
-<div class="menu">
+<!-- <div class="menu"> -->
+<!-- <div> -->
 <ul class="menu">
     <li>                                                                         
         <a href="{{ route('main') }}">Главная</a>                            
@@ -10,4 +11,4 @@
         <a href="{{ route('shop') }}">Тестовый магазин</a>                   
     </li>                                                                        
 </ul>                                                                            
-</div>
+<!-- </div> -->
