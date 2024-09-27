@@ -11,12 +11,12 @@ class MainController extends Controller
 {
     public function main() {
         CounterController::setAllCount();
-        return view('main');
-    }
-
-    public function author() {
         $sliders = Slider::orderBy('id')->get();
         return view('author', ['sliders'=>$sliders]);
+    }
+
+    public function pyatnashki() {
+        return view('pyatnashki');
     }
     
     public function testWorks() {

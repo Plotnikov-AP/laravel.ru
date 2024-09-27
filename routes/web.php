@@ -12,7 +12,7 @@ Route::get('/', function () {
     return redirect()->route('main');;
 });
 Route::get('/main', [MainController::class, 'main'])->name('main');                                         
-Route::get('/author', [MainController::class, 'author'])->name('author');                 
+Route::get('/pyatnashki', [MainController::class, 'pyatnashki'])->name('pyatnashki');                 
 Route::get('/testworks', [MainController::class, 'testWorks'])->name('testworks');        
 Route::get('/shop', [MainController::class, 'shop'])
 ->middleware('auth')

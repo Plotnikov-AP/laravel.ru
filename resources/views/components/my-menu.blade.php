@@ -5,7 +5,7 @@
         <a href="{{ route('main') }}">Главная</a>                            
     </li>                                                         
     <li>                                                                         
-        <a href="{{ route('author') }}">Об авторе</a>                            
+        <a href="{{ route('pyatnashki') }}">Пятнашки</a>                            
     </li>                                                                        
     <li>                                                                         
         <a href="{{ route('shop') }}">Тестовый магазин</a>                   
