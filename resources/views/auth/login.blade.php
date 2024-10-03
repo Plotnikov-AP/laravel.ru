@@ -1,3 +1,7 @@
+<x-main-layout>
+    <x-slot name="title">Об авторе</x-slot>
+    <x-slot name="content">
+
 <x-guest-layout>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
@@ -47,3 +51,6 @@
         </div>
     </form>
 </x-guest-layout>
+
+</x-slot>
+</x-main-layout>
