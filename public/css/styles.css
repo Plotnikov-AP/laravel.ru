@@ -228,7 +228,116 @@ ul.menu li:last-child a {
                                                                  
 #bullets .active {                                               
 	background: url("../images/bullet_active.png") no-repeat;
-}                                                                
+}
+
+/* CHAT */
+
+
+.chats h3 {
+	font-size: 30px;
+	font-weight:500;
+	font-style: italic;
+	color: #8800ff;
+}
+
+.chats p {
+	font-size: 20px;
+	font-weight:500;
+	font-style: italic;
+}
+
+.chats table {
+	width: 100%;
+}
+
+.chats th {
+	border: 1px solid grey;
+	border-radius: 12px;
+}
+
+#modal_form_new_chat {
+	display: none;
+	position:fixed;
+	width: 50%;
+	height: 70%;
+	top:25%;
+	left:25%;
+	z-index: 1;
+	background-color:rgb(138, 157, 235);
+	font-size: 30px;
+	text-align: center;
+	justify-content: center;
+}
+
+#modal_form_new_comment {
+	display: none;
+	position:fixed;
+	width: 50%;
+	height: 70%;
+	top:25%;
+	left:25%;
+	z-index: 1;
+	background-color:rgb(138, 157, 235);
+	font-size: 30px;
+	text-align: center;
+	justify-content: center;
+}
+
+#modal_form_new_chat label {
+	font-size: 20px;
+}
+
+.button_chat {
+	display: inline-flex;
+    margin: 10px;
+    text-decoration: none;
+    border: 2px solid #BFE2FF;
+    position: relative;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 12px 30px;
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase; 
+    font-family: 'Roboto', Тahoma, sans-serif;
+    background: #337AB7;
+    transition: box-shadow 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.switch-btn {
+	display: inline-block;
+	width: 72px; /* ширина */
+	height: 38px; /* высота */
+	border-radius: 19px; /* радиус скругления */
+	background: #bfbfbf; /* цвет фона */
+	z-index: 0;
+	margin: 0;
+	padding: 0;
+	border: none;
+	cursor: pointer;
+	position: relative;
+	transition-duration: 300ms; /* анимация */
+  }
+  .switch-btn::after {
+	content: "";
+	height: 32px; /* высота кнопки */
+	width: 32px; /* ширина кнопки */
+	border-radius: 17px;
+	background: #fff; /* цвет кнопки */
+	top: 3px; /* положение кнопки по вертикали относительно основы */
+	left: 3px; /* положение кнопки по горизонтали относительно основы */
+	transition-duration: 300ms; /* анимация */
+	position: absolute;
+	z-index: 1;
+  }
+  .switch-on {
+	background: #118c4e;
+  }
+  .switch-on::after {
+	left: 37px;
+  }
 
 .product {
 	border: 1px solid black;
@@ -281,7 +390,10 @@ ul.menu li:last-child a {
 }
 
 .modal_close {
-	float: right;
+	position: absolute;
+    right: -35px;
+    top: -35px;
+	/* float: right; */
 	font-size: 40px;
 }
 

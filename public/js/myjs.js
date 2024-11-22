@@ -113,3 +113,13 @@ function basket_add(id) {
 	});
 }
 
+function button_show_modal_form_new_chat() {
+	// Показываем форму для добавления нового чата
+	$('#modal_form_new_chat').show();
+}
+
+function button_show_modal_form_new_comment() {
+	// Показываем форму для добавления нового комментария
+	$('#modal_form_new_comment').show();
+}
+

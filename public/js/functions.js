@@ -41,8 +41,10 @@ $(document).ready(function() {
 
 	$('.menu a').each(function () { 
 		var location = window.location.href;
+		console.log(location);
 		var link = this.href;
-		if(location == link) { 
+		console.log(link);
+		if ((location.includes(link))) { 
 			$(this).addClass('menuactive');
 		}
 	});

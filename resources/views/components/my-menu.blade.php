@@ -6,7 +6,10 @@
     </li>                                                         
     <li>                                                                         
         <a href="{{ route('pyatnashki') }}">Пятнашки</a>                            
-    </li>                                                                        
+    </li>
+    <li>                                                                         
+        <a href="{{ route('chats') }}">Мини чат</a>                            
+    </li>                                                                       
     <li>                                                                         
         <a href="{{ route('shop') }}">Тестовый магазин</a>                   
     </li>                                                                        

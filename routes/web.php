@@ -12,8 +12,17 @@ Route::get('/', function () {
     return redirect()->route('main');;
 });
 Route::get('/main', [MainController::class, 'main'])->name('main');                                         
-Route::get('/pyatnashki', [MainController::class, 'pyatnashki'])->name('pyatnashki');                 
-Route::get('/testworks', [MainController::class, 'testWorks'])->name('testworks');        
+Route::get('/pyatnashki', [MainController::class, 'pyatnashki'])->name('pyatnashki');
+Route::get('/chats', [MainController::class, 'chats'])
+->middleware('auth')
+->name('chats');
+Route::get('/chats/{id}', [MainController::class, 'chat'])
+->middleware('auth')
+->name('chat');
+Route::post('/chats/add_chat', [MainController::class, 'add_chat']);
+Route::post('/chats/add_comment', [MainController::class, 'add_comment']);
+Route::post('/chats/del_comment/{id}', [MainController::class, 'del_comment']);           
+// Route::get('/testworks', [MainController::class, 'testWorks'])->name('testworks');        
 Route::get('/shop', [MainController::class, 'shop'])
 ->middleware('auth')
 ->name('shop');                       
