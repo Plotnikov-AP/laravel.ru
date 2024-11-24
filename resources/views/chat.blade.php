@@ -27,7 +27,7 @@
                 @csrf
                 <input type="hidden" name="id_chat" value="{{ $chat->id }}" />
                 <?php 
-                    if (Auth::user()->name==$chat->author||Auth::user()->name=='admin@admin.ru') {
+                    if (Auth::user()->name==$chat->author||Auth::user()->email==Config::get('myconfig.admin_mail')) {
                         echo '<input class="button_chat" type="submit" value="Удалить комментарий" />';
                     }
                 ?>

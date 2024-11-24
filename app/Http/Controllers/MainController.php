@@ -10,6 +10,7 @@ use App\Models\Product;
 use App\Models\Slider;
 use App\Models\Chat;
 use App\Models\Comment;
+use Illuminate\Support\Facades\Config;
 
 class MainController extends Controller
 {
@@ -24,7 +25,7 @@ class MainController extends Controller
     }
 
     public function chats() {
-        if (Auth::user()->name=='plotnikov-ap@yandex.ru') {
+        if (Auth::user()->email==Config::get('myconfig.admin_mail')) {
             $chats=Chat::all();
         } else {
             $chats=DB::table('chats')
