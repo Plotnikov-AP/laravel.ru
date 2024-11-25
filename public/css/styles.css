@@ -241,6 +241,7 @@ ul.menu li:last-child a {
 }
 
 .chats p {
+	color:crimson;
 	font-size: 20px;
 	font-weight:500;
 	font-style: italic;
