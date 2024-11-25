@@ -34,7 +34,7 @@ class MainController extends Controller
             ->orwhere('author', '=', Auth::user()->name)
             ->get();
         }
-        print_r($chats);
+        // print_r($chats);
         //для каждого чата создаем массив всего сообщений и новых сообщений
         foreach ($chats as $key=>$chat) {
             $id_user=Auth::user()->id;
