@@ -34,6 +34,7 @@ class MainController extends Controller
             ->orwhere('author', '=', Auth::user()->name)
             ->get();
         }
+        print_r($chats);
         //для каждого чата создаем массив всего сообщений и новых сообщений
         foreach ($chats as $key=>$chat) {
             $id_user=Auth::user()->id;
@@ -53,8 +54,8 @@ class MainController extends Controller
             // echo "id_chat_all_count=$id_chat_count";
             // echo "id_chat_viewed=$id_chat_viewed";
             // echo '<br />';
-            $chats[$key]['count']=$id_chat_count;
-            $chats[$key]['viewed']=$id_chat_count-$id_chat_viewed;
+            $chats[$key]->count=$id_chat_count;
+            $chats[$key]->viewed=$id_chat_count-$id_chat_viewed;
         }
         return view('chats', ['chats'=>$chats]);
     }
