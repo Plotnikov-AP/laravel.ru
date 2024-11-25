@@ -14,7 +14,7 @@
         @foreach ($chats as $chat)
             <p><a href="/chats/{{ $chat->id }}">{{ $chat->content_chat }}</a></p>
             <div class="chats_all_new">всего сообщений: {{ $chat->count }}</div>
-            <div class="chats_all_new">новых сообщений: {{ $chat->viewed }}</div>
+            <div class="chats_all_new">непрочитанных сообщений: {{ $chat->viewed }}</div>
             <br />
         @endforeach
         <button class="button_chat" onclick="button_show_modal_form_new_chat()">Создать новую тему чата</button>
