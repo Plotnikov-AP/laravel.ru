@@ -10,6 +10,7 @@ use App\Models\Product;
 use App\Models\Slider;
 use App\Models\Chat;
 use App\Models\Comment;
+use App\Models\CommentAllNew;
 use Illuminate\Support\Facades\Config;
 
 class MainController extends Controller
@@ -33,15 +34,45 @@ class MainController extends Controller
             ->orwhere('author', '=', Auth::user()->name)
             ->get();
         }
+        //для каждого чата создаем массив всего сообщений и новых сообщений
+        foreach ($chats as $key=>$chat) {
+            $id_user=Auth::user()->id;
+            $id_chat=$chat->id;
+            //всего сообщений в этом чате
+            $id_chat_count=$comments=DB::table('comments')
+            ->where('id_chat', '=', $id_chat)
+            ->count();
+            //найдем из БД, сколько было в прошллое посещение чата.
+            $id_chat_viewed=DB::table('comment_all_news')
+            ->select('viewed')
+            ->where('id_user', '=', $id_user)
+            ->where('id_chat', '=', $id_chat)
+            ->first()->viewed?? 0;
+            // echo "id_user=$id_user";
+            // echo "id_chat=$id_chat";
+            // echo "id_chat_all_count=$id_chat_count";
+            // echo "id_chat_viewed=$id_chat_viewed";
+            // echo '<br />';
+            $chats[$key]['count']=$id_chat_count;
+            $chats[$key]['viewed']=$id_chat_count-$id_chat_viewed;
+        }
         return view('chats', ['chats'=>$chats]);
     }
 
     public function chat($id) {
-
         $chat=Chat::find($id);
         $comments=DB::table('comments')
         ->where('id_chat', '=', $id)
         ->get();
+        $count=count($comments);
+        // echo "count=$count";
+        //запишем в БД
+        $commentallnews=new CommentAllNew();
+        $commentallnews->id_user=Auth::user()->id;
+        $commentallnews->id_chat=$id;
+        $commentallnews->viewed=$count;
+        $commentallnews->save();
+        //здесь нужно обработать результат и если данные не записаны, записать в лог
         return view('chat', ['chat'=>$chat, 'comments'=>$comments]);
     }
 

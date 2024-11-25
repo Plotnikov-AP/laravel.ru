@@ -246,6 +246,10 @@ ul.menu li:last-child a {
 	font-style: italic;
 }
 
+.chats_all_new {
+	font-size: 14px;
+}
+
 .chats table {
 	width: 100%;
 }
