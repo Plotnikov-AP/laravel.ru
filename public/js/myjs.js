@@ -123,3 +123,34 @@ function button_show_modal_form_new_comment() {
 	$('#modal_form_new_comment').show();
 }
 
+async function SaveData(url, token, data) {
+	$.ajax({
+		url: url,
+		type: "POST",
+		data:{
+		  "_token": token,
+		  data: data,
+		},
+		success:function(response) {
+			// console.log(response);
+		},
+	});
+}
+
+function chat_like_count(id_chat)
+{
+	//делаем запрос к БД
+	$.ajax({                         
+	url: dop_url+"/api/chats/like/count/id_chat",                        
+	method: 'GET',
+	async: false,
+	}).done(function(data) {
+		if (!!data) {
+			$('#basket-count').text(data);
+		} else {
+			$('#basket-count').text('not found');
+		}
+	});
+	setTimeout("chat_count()", 5000);
+}
+

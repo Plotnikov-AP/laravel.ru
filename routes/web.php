@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Counter;                                                                   
 use App\Http\Controllers\MainController;                                                  
 use App\Http\Controllers\BasketController;
+use App\Http\Controllers\ChatLikeController;
+
 
 
 Route::get('/', function () {
@@ -28,6 +30,7 @@ Route::get('/shop', [MainController::class, 'shop'])
 ->name('shop');                       
 Route::get('/shop/product/{id}', [MainController::class, 'productId']);                   
 Route::get('/basket/show', [BasketController::class, 'basket_show'])->name('basket_show');
+Route::post('/chats/chatslike', [ChatLikeController::class, 'chats_like']);
 
 
 

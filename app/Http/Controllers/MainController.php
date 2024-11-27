@@ -11,6 +11,7 @@ use App\Models\Slider;
 use App\Models\Chat;
 use App\Models\Comment;
 use App\Models\CommentAllNew;
+use App\Models\ChatLike;
 use Illuminate\Support\Facades\Config;
 
 class MainController extends Controller
@@ -60,6 +61,23 @@ class MainController extends Controller
         return view('chats', ['chats'=>$chats]);
     }
 
+    private function get_chat_like($id, $str) {
+        switch ($str) {
+            case 'yes':
+                return ChatLike::where('id_chat', '=', $id)
+                ->where('yes', '=', 1)
+                ->count();
+                break;
+            case 'no':
+                return ChatLike::where('id_chat', '=', $id)
+                ->where('no', '=', 1)
+                ->count();
+                break;
+            default: throw new Exception('В функцию get_chat_like поданы некорректные входные данные');
+
+        }
+    }
+
     public function chat($id) {
         $chat=Chat::find($id);
         $comments=DB::table('comments')
@@ -74,7 +92,10 @@ class MainController extends Controller
         $commentallnews->viewed=$count;
         $commentallnews->save();
         //здесь нужно обработать результат и если данные не записаны, записать в лог
-        return view('chat', ['chat'=>$chat, 'comments'=>$comments]);
+        //посчитаем like (yes mo) на странице
+        $chat_like_yes=$this->get_chat_like($id, 'yes');
+        $chat_like_no=$this->get_chat_like($id, 'no');
+        return view('chat', ['chat'=>$chat, 'comments'=>$comments, 'chat_like_yes'=>$chat_like_yes, 'chat_like_no'=>$chat_like_no]);
     }
 
     public function add_chat(Request $request) {
