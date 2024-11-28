@@ -21,7 +21,7 @@
                 </th>
             </tr>
         </table>
-        <h3 style="text-align:center">{{ $chat->content_chat }}</h3>
+        <h3 style="text-align:center">{{ $chat->content_chat }}</h3><br /><br />
         @foreach ($comments as $comment)
         <table class="">
             <tr>
@@ -38,7 +38,6 @@
                     }
                 ?>
             </form>
-            <p>-------------------------------</p>
         @endforeach
         @if ($errors->any())
         <script>
