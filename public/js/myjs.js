@@ -127,6 +127,7 @@ async function SaveData(url, token, data) {
 	$.ajax({
 		url: url,
 		type: "POST",
+		async: false,
 		data:{
 		  "_token": token,
 		  data: data,
@@ -135,22 +136,26 @@ async function SaveData(url, token, data) {
 			// console.log(response);
 		},
 	});
+	// console.log(data);
+	//обновим данные по yes no на странице
+	chat_like_count(data['id_chat']);
 }
 
 function chat_like_count(id_chat)
 {
 	//делаем запрос к БД
 	$.ajax({                         
-	url: dop_url+"/api/chats/like/count/id_chat",                        
-	method: 'GET',
+	url: dop_url+"/api/chats/like/count/"+id_chat,                       
+	method: 'POST',
 	async: false,
 	}).done(function(data) {
 		if (!!data) {
-			$('#basket-count').text(data);
+			$('#chat_like_yes').text(data[0]);
+			$('#chat_like_no').text(data[1]);
 		} else {
-			$('#basket-count').text('not found');
+			$('#chat_like_yes').text('не найдено');
+			$('#chat_like_no').text('не найдено');
 		}
 	});
-	setTimeout("chat_count()", 5000);
 }
 
