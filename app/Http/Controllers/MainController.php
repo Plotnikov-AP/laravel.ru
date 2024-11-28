@@ -61,15 +61,15 @@ class MainController extends Controller
         return view('chats', ['chats'=>$chats]);
     }
 
-    private function get_chat_like($id, $str) {
+    public static function get_chat_like($id_chat, $str) {
         switch ($str) {
             case 'yes':
-                return ChatLike::where('id_chat', '=', $id)
+                return ChatLike::where('id_chat', '=', $id_chat)
                 ->where('yes', '=', 1)
                 ->count();
                 break;
             case 'no':
-                return ChatLike::where('id_chat', '=', $id)
+                return ChatLike::where('id_chat', '=', $id_chat)
                 ->where('no', '=', 1)
                 ->count();
                 break;
@@ -93,8 +93,8 @@ class MainController extends Controller
         $commentallnews->save();
         //здесь нужно обработать результат и если данные не записаны, записать в лог
         //посчитаем like (yes mo) на странице
-        $chat_like_yes=$this->get_chat_like($id, 'yes');
-        $chat_like_no=$this->get_chat_like($id, 'no');
+        $chat_like_yes=$this::get_chat_like($id, 'yes');
+        $chat_like_no=$this::get_chat_like($id, 'no');
         return view('chat', ['chat'=>$chat, 'comments'=>$comments, 'chat_like_yes'=>$chat_like_yes, 'chat_like_no'=>$chat_like_no]);
     }
 

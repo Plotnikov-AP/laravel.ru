@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('chat_likes', function (Blueprint $table) {
             $table->id();
-            $table->string('id_chat_user');
             $table->integer('id_chat');
             $table->integer('id_user');
             $table->integer('yes');

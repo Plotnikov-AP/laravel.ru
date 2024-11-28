@@ -14,10 +14,10 @@
                 ?>
                 <th>дата создания: {{ $chat->created_at }}</th>
                 <th>
-                    <button onclick="SaveData('/chats/chatslike', '{{ csrf_token() }}', {'id_chat': '{{ $chat->id }}', 'id_user': '{{ Auth::user()->id }}', 'yes': '1', 'no': '0'});"><span #id="chat_like_yes">{{ $chat_like_yes }}</span><img src="/images/yes.png" alt="понравилось"></button>
+                    <button onclick="SaveData('/api/chats/chatslike', '{{ csrf_token() }}', {'id_chat': '{{ $chat->id }}', 'id_user': '{{ Auth::user()->id }}', 'yes': '1', 'no': '0'});"><span id="chat_like_yes">{{ $chat_like_yes }}</span><img src="/images/yes.png" alt="понравилось"></button>
                 </th>
                 <th>
-                <button onclick="SaveData('/chats/chatslike', '{{ csrf_token() }}', {'id_chat': '{{ $chat->id }}', 'id_user': '{{ Auth::user()->id }}', 'yes': '0', 'no': '1'});"><span #id="chat_like_no">{{ $chat_like_no }}<img src="/images/no.png" alt="не понравилось"></button>
+                <button onclick="SaveData('/api/chats/chatslike', '{{ csrf_token() }}', {'id_chat': '{{ $chat->id }}', 'id_user': '{{ Auth::user()->id }}', 'yes': '0', 'no': '1'});"><span id="chat_like_no">{{ $chat_like_no }}</span><img src="/images/no.png" alt="не понравилось"></button>
                 </th>
             </tr>
         </table>
