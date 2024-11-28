@@ -123,7 +123,7 @@ function button_show_modal_form_new_comment() {
 	$('#modal_form_new_comment').show();
 }
 
-async function SaveData(url, token, data) {
+function SaveData(url, token, data) {
 	$.ajax({
 		url: url,
 		type: "POST",
@@ -155,6 +155,43 @@ function chat_like_count(id_chat)
 		} else {
 			$('#chat_like_yes').text('не найдено');
 			$('#chat_like_no').text('не найдено');
+		}
+	});
+}
+
+function SaveDataForComments(url, token, data) {
+	$.ajax({
+		url: url,
+		type: "POST",
+		async: false,
+		data:{
+		  "_token": token,
+		  data: data,
+		},
+		success:function(response) {
+			// console.log(response);
+		},
+	});
+	// console.log(data);
+	//обновим данные по yes no на странице
+	comment_like_count(data['id_comment']);
+}
+
+function comment_like_count(id_comment)
+{
+	//делаем запрос к БД
+	$.ajax({                         
+	url: dop_url+"/api/comments/like/count/"+id_comment,                       
+	method: 'POST',
+	async: false,
+	}).done(function(data) {
+		if (!!data) {
+			console.log('#comment'+id_comment+'_like_yes');
+			$('#comment'+id_comment+'_like_yes').text(data[0]);
+			$('#comment'+id_comment+'_like_no').text(data[1]);
+		} else {
+			$('#comment'+id_comment+'_like_yes').text('не найдено');
+			$('#comment'+id_comment+'_like_no').text('не найдено');
 		}
 	});
 }

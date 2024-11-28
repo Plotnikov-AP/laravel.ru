@@ -10,7 +10,7 @@ use App\Http\Controllers\MainController;
 class ChatLikeController extends Controller
 {
     public function chats_like(Request $request) {
-        print_r($request->post());
+        // print_r($request->post());
         //валидация полученных данных
         $validated = $request->validate([
             'data.id_chat' => 'required',
@@ -18,7 +18,7 @@ class ChatLikeController extends Controller
             'data.yes' => 'required',
             'data.no' => 'required'
         ]);
-        print_r($validated);
+        // print_r($validated);
         $id=1000000*$validated['data']['id_chat'].$validated['data']['id_user'];
         $result=DB::table('chat_likes')
         ->upsert(

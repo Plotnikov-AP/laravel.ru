@@ -25,7 +25,13 @@
         @foreach ($comments as $comment)
         <table class="">
             <tr>
-                <th>автор комментария: {{ $chat->author }}</th><th>дата создания: {{ $chat->created_at }}</th><th>понравилось</th><th>не понравилось</th>
+                <th>автор комментария: {{ $chat->author }}</th><th>дата создания: {{ $chat->created_at }}</th>
+                <th>
+                    <button onclick="SaveDataForComments('/api/chats/commentslike', '{{ csrf_token() }}', {'id_chat': '{{ $chat->id }}', 'id_comment': '{{ $comment->id }}', 'id_user': '{{ Auth::user()->id }}', 'yes': '1', 'no': '0'});"><span id="comment{{ $comment->id }}_like_yes">{{ $comment->yes }}</span><img src="/images/yes.png" alt="понравилось"></button>
+                </th>
+                <th>
+                    <button onclick="SaveDataForComments('/api/chats/commentslike', '{{ csrf_token() }}', {'id_chat': '{{ $chat->id }}', 'id_comment': '{{ $comment->id }}', 'id_user': '{{ Auth::user()->id }}', 'yes': '0', 'no': '1'});"><span id="comment{{ $comment->id }}_like_no">{{ $comment->no }}</span><img src="/images/no.png" alt="не понравилось"></button>
+                </th>
             </tr>
         </table>
             <p>{{ $comment->content_comment }}</p>

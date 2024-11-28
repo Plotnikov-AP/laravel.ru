@@ -84,7 +84,6 @@ class MainController extends Controller
         ->where('id_chat', '=', $id)
         ->get();
         $count=count($comments);
-        // echo "count=$count";
         //запишем в БД
         $commentallnews=new CommentAllNew();
         $commentallnews->id_user=Auth::user()->id;
@@ -95,6 +94,12 @@ class MainController extends Controller
         //посчитаем like (yes mo) на странице
         $chat_like_yes=$this::get_chat_like($id, 'yes');
         $chat_like_no=$this::get_chat_like($id, 'no');
+        //для каждого комментария нужно посчитать like yes no
+        foreach ($comments as $key=>$comment) {
+            $comments[$key]->yes=CommentLikeController::get_comment_like($comment->id, 'yes');
+            $comments[$key]->no=CommentLikeController::get_comment_like($comment->id, 'no');
+        }
+        print_r($comments);
         return view('chat', ['chat'=>$chat, 'comments'=>$comments, 'chat_like_yes'=>$chat_like_yes, 'chat_like_no'=>$chat_like_no]);
     }
 

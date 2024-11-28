@@ -6,6 +6,8 @@ use App\Http\Controllers\CounterController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BasketController;
 use App\Http\Controllers\ChatLikeController;
+use App\Http\Controllers\CommentLikeController;
+
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -18,4 +20,5 @@ Route::get('/basket/del/{id}', [BasketController::class, 'del']);
 Route::get('/basket/count', [BasketController::class, 'count']);
 Route::post('/chats/chatslike', [ChatLikeController::class, 'chats_like']);
 Route::post('/chats/like/count/{id_chat}', [ChatLikeController::class, 'api_get_chats_like_count_yes_no']);
-Route::get('/chats/like/count/{id_chat}', [ChatLikeController::class, 'api_get_chats_like_count_yes_no']);
+Route::post('/chats/commentslike', [CommentLikeController::class, 'comments_like']);
+Route::post('/comments/like/count/{id_comment}', [CommentLikeController::class, 'api_get_comment_like_count_yes_no']);
