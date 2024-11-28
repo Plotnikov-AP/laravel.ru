@@ -99,7 +99,7 @@ class MainController extends Controller
             $comments[$key]->yes=CommentLikeController::get_comment_like($comment->id, 'yes');
             $comments[$key]->no=CommentLikeController::get_comment_like($comment->id, 'no');
         }
-        print_r($comments);
+        // print_r($comments);
         return view('chat', ['chat'=>$chat, 'comments'=>$comments, 'chat_like_yes'=>$chat_like_yes, 'chat_like_no'=>$chat_like_no]);
     }
 
